@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@media screen and (min-width: 1024px) {
+    body{
+        margin: 0;
+        padding: 0;
+        background: #ffdef6;
+        overflow: hidden;
+    }
+    .forgetp{
+        width: 500px;
+        height: 529px;
+        margin: 10% 0 0 39%;
+        background: #FCFCFD;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 24px;
+    }
+    .forgetp h1{
+        width: 340px;
+        height: 93px;
+        margin: 2% 0 0 21%;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 42px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FE8DDF;
+    }
+    .forgetp p{
+        width: 302px;
+        height: 35px;
+        margin: -3% 0 3% 25%;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #000000;
+    }
+    .forgetp form{
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+    form #hr1{
+        position: relative;
+        width: 150px;
+        height: 0px;
+        float:left;
+        margin: 8% 0 8% 2%;
+
+        border: 1px solid rgba(0, 0, 0, 0.35);
+    }
+    form #or{
+        position: relative;
+        float: left;
+        margin: 0 0 0 0; 
+        left: 8%;
+    }
+    form #hr2{
+        position: relative;
+        width: 150px;
+        height: 0px;
+        float:right;
+        margin: 8% 2% 8% 0%;
+
+        border: 1px solid rgba(0, 0, 0, 0.35);
+    }
+    form .txt_field{
+        clear: both;
+        position: relative;
+        width: 400px;
+        height: 50px;
+        margin: 2% 0 0 2%;
+
+        background: #fffdd98f;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+    .txt_field input{
+        position: relative;
+        width: 187px;
+        height: 33px;
+        padding: 0 5px;
+        margin-top: 1.5%;
+        left: 1%;
+        background: none;
+        outline: none;
+        border: none;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 17px;
+        display: flex;
+
+        color: rgb(0, 0, 0);
+    }
+    #sendbtn{
+        margin: 2% 0 0 33.5%;
+        width: 400px;
+        height: 57px;
+        margin: 10% 0 0 2%;
+
+        background: #BDABF2;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 15px;
+        color: white;
+        font-size: 20px;
+        font-family: 'Inter';
+    }
+    
+}
