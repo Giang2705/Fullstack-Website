@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@media screen and (min-width: 1024px) {
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #FFDEF6;
+        overflow: hidden;
+    }
+    .signup{
+        position: relative;
+        width: 35%;
+        height: 750px;
+        left: 34%;
+        margin-top: 2%;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 46px;
+    }
+    .signup h1{
+        position: relative;
+        width: 283px;
+        height: 100px;
+        left: 23%;
+        top: 0%;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 42px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FE8DDF;
+    }
+    .signup form{
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+    form .txt_field{
+        position: relative;
+        width: 400px;
+        height: 50px;
+        margin-bottom: 10%;
+        left: 3%;
+        top: 100%;
+
+        background: #fffdd98f;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+    .txt_field input{
+        position: relative;
+        width: 187px;
+        height: 33px;
+        padding: 0 5px;
+        margin-top: 2%;
+        left: 1%;
+        background: none;
+        outline: none;
+        border: none;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 17px;
+        display: flex;
+
+        color: rgb(0, 0, 0);
+    }
+    form .termservice{
+        position: relative;
+        width: 391px;
+        height: 39px;
+        left: 5%;
+        top: 100%;
+    }
+    #registerbtn{
+        position: relative;
+        margin-top: 5%;
+        width: 400px;
+        height: 57px;
+        left: 3%;
+
+        background: #BDABF2;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 15px;
+        color: #FFFFFF;
+        font-size: 20px;
+    }
+    form p{
+        position: relative;
+        width: 284px;
+        height: 91px;
+        margin-top: 10%;
+        left: 17%;
+    }
+    img{
+        margin-top:5%;
+        height: 40px;
+        width: 40px;
+        margin-left: 46%;
+    }
+}

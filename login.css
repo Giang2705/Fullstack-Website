@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@media screen and (min-width: 1024px) {
+    body{
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+        background:#FFFDD9;
+        overflow: hidden;
+    }
+    .right{
+        position: absolute;
+        width: 377px;
+        height: 538px;
+        left: 71.75%;
+        top: 15%;
+        background: #FCFCFD;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 24px;
+    }
+    .right h1{
+        position: relative;
+        width: 184px;
+        height: 74px;
+        left: 25%;
+        top: 10%;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+        
+        color: #FE8DDF;
+
+    }
+    .right p{
+        position: relative;
+        width: 248px;
+        height: 30px;
+        left: 16%;
+        top: 6%;
+        margin-bottom: 15%;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+
+        color: #000000;
+    }
+    .right form{
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+    form .txt_field{
+        position: relative;
+        width: 292px;
+        height: 40px;
+        margin-bottom: 6%;
+        left: 1%;
+
+        background: rgba(230, 227, 227, 0.5);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+    .txt_field input{
+        position: relative;
+        width: 187px;
+        height: 33px;
+        padding: 0 5px;
+        margin-top: 0.5%;
+        left: 1%;
+        background: none;
+        outline: none;
+        border: none;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+
+        color: rgb(0, 0, 0);
+    }
+    #loginbtn{
+        position: relative;
+        width: 292px;
+        height: 52px;
+        left: 1%;
+        margin-top: 5%;
+
+        background: #BDABF2;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 15px;
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+    .signup_link{
+        position: relative;
+        width: 377px;
+        height: 72px;
+        left: 71.75%;
+        top: 680px;
+
+        background: #FCFCFD;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 24px;
+    }
+    .signup_link p{
+        position: relative;
+        width: 250px;
+        height: 41px;
+        left: 17%;
+        margin-top: 7%;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+
+        color: #000000;
+    }
+    form #hr1{
+        position: relative;
+        margin-top: 10%;
+        width: 107px;
+        height: 0px;
+        float:left;
+        margin-bottom: 8%;
+        margin-left: 2%;
+
+        border: 1px solid rgba(0, 0, 0, 0.35);
+    }
+    form #or{
+        position: relative;
+        float: left;
+        margin-left: 6%;
+    }
+    form #hr2{
+        position: relative;
+        margin-top: 10%;
+        width: 107px;
+        height: 0px;
+        float:right;
+        margin-bottom: 8%;
+
+        border: 1px solid rgba(0, 0, 0, 0.35);
+    }
+    form #fb{
+        clear: both;
+        text-align: center;
+        margin-left: 5%;
+    }
+    .square{
+        position: absolute;
+        bottom: 0%;
+        width: 69%;
+        height: 100%;
+        background: #FFDEF6;
+    }
+    img{
+        margin-bottom: 5%;
+        height: 30px;
+        width: 30px;
+        margin-left: 47%;
+    }
+}   
