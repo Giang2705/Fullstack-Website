@@ -5,21 +5,21 @@
         font-style: normal;
         margin: 0;
         padding: 0;
-        background:#FFFDD9;
+        background-color:#FFFDD9;
         overflow: hidden;
     }
     .right{
         position: absolute;
         width: 377px;
         height: 538px;
-        left: 71.75%;
+        left: 75%;
         top: 15%;
         background: #FCFCFD;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-sizing: border-box;
         border-radius: 24px;
     }
-    .right h1{
+    .right #login{
         position: relative;
         width: 184px;
         height: 74px;
@@ -35,6 +35,9 @@
         
         color: #FE8DDF;
 
+    }
+    .right #welcome{
+        display: none;
     }
     .right p{
         position: relative;
@@ -71,7 +74,7 @@
     }
     .txt_field input{
         position: relative;
-        width: 187px;
+        width: 250px;
         height: 33px;
         padding: 0 5px;
         margin-top: 0.5%;
@@ -83,7 +86,7 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 15px;
         line-height: 15px;
 
         color: rgb(0, 0, 0);
@@ -102,12 +105,18 @@
         font-weight: 700;
         color: #FFFFFF;
     }
+    #loginbtn2{
+        display: none;
+    }
+    label[for="loginbtn2"]{
+        display: none;
+    }
     .signup_link{
         position: relative;
         width: 377px;
         height: 72px;
-        left: 71.75%;
-        top: 680px;
+        left: 75%;
+        margin-top: 38%;
 
         background: #FCFCFD;
         border: 1px solid rgba(0, 0, 0, 0.2);
@@ -159,7 +168,7 @@
     form #fb{
         clear: both;
         text-align: center;
-        margin-left: 5%;
+        margin:0 0 5% 5%;
     }
     .square{
         position: absolute;
@@ -168,10 +177,338 @@
         height: 100%;
         background: #FFDEF6;
     }
+    .rounded-circle{
+        display: none;
+    }
     img{
         margin-bottom: 5%;
         height: 30px;
         width: 30px;
         margin-left: 47%;
     }
-}   
+    #forgotp{
+        margin: 0% 0 0 35%;
+        font-size: small;
+        text-align: center;
+
+    }
+    #signupformobile{
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) and (max-width :1023px){
+    body{
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+        background-color:#FDD1F1;
+        overflow: hidden;
+    }
+    .right #login{
+        display: none;
+    }
+    .right p{
+        display: none;
+    }
+    form #loginbtn{
+        display: none;
+    }
+    .signup_link{
+        display: none;
+    }
+    #hr1{
+        display: none;
+    }
+    #hr2{
+        display: none;
+    }
+    #or{
+        display: none;
+    }
+    .square{
+        display: none;
+    }
+    .right{
+        position: absolute;
+        width: 377px;
+        height: 538px;
+        left: 30%;
+        top: 15%;
+        box-sizing: border-box;
+        border-radius: 24px;
+    }
+    .right #welcome{
+        z-index: 3;
+        font-size: 50px;
+        font-weight: 700;
+        margin: 0 15% 15% -10%;
+        color: #fd85dd;
+    }
+    .right form{
+        padding: 0 10%;
+        box-sizing: border-box;
+    }
+    form .txt_field{
+        position: relative;
+        width: 292px;
+        height: 50px;
+        right: 11%;
+        margin-bottom: 6%;
+
+        background: #ffffffb7;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+    .txt_field input{
+        position: relative;
+        width: 250px;
+        height: 33px;
+        left: 3%;
+        margin-top: 2.5%;
+        background: none;
+        outline: none;
+        border: none;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 15px;
+
+        color: rgb(0, 0, 0);
+    }
+    label[for="loginbtn2"]{
+        font-size: 25px;
+        color:#FFFFFF;
+        font-weight: 700;
+        margin-left: -10%;
+    }
+    #loginbtn2{
+        height:50px;
+        width: 50px;
+        margin-left: 50%;
+        box-sizing: border-box;
+        padding:0% 0 1% 0;
+        font-size: 30px;
+        color: white;
+        background-color: #BDABF2;
+        border: 0px;
+    }
+    img{
+        height:40px;
+        width: 40px;
+        margin: 10% 0 3% 29%;
+    }
+    #fb{
+        margin: 0% 0 20% 10%;
+    }
+    #signupformobile{
+        width: 130px;
+        height: 70px;
+        margin: 0% 0% 0% -10%;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+        
+        color: #FE8DDF;
+        background-size: 100px 100px;
+        background-color:#F9F6B3 ;
+        border-radius: 5px;
+    }
+    #forgotp{
+        margin: 0% 0 0 25%;
+        width: 180px;
+        height: 50px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+
+        color: #F9F6B3;
+        background: #FE8DDF;
+        border-radius: 5px;
+    }
+    #c1{
+        width: 650px;
+        height: 270px;
+        margin: -50% 0 0 -20% ;
+
+        background: #F9F6B3;
+        transform:  rotate(-10deg)
+    }
+    #c2{
+        width: 1100px;
+        height: 330px;
+        margin: -10% 0 0 -25% ;
+
+        background: #FFFFFF;
+        transform:  rotate(-25deg)
+    }
+}
+@media screen and (max-width: 767px){
+        body{
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+        background-color:#FDD1F1;
+        overflow: hidden;
+    }
+    .right #login{
+        display: none;
+    }
+    .right p{
+        display: none;
+    }
+    form #loginbtn{
+        display: none;
+    }
+    .signup_link{
+        display: none;
+    }
+    #hr1{
+        display: none;
+    }
+    #hr2{
+        display: none;
+    }
+    #or{
+        display: none;
+    }
+    .square{
+        display: none;
+    }
+    .right{
+        position: absolute;
+        width: 377px;
+        height: 538px;
+        left: 30%;
+        top: 15%;
+        box-sizing: border-box;
+        border-radius: 24px;
+    }
+    .right #welcome{
+        z-index: 3;
+        font-size: 50px;
+        font-weight: 700;
+        margin: 0 15% 15% -10%;
+        color: #fd85dd;
+    }
+    .right form{
+        padding: 0 10%;
+        box-sizing: border-box;
+    }
+    form .txt_field{
+        position: relative;
+        width: 292px;
+        height: 50px;
+        right: 11%;
+        margin-bottom: 6%;
+
+        background: #ffffffb7;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+    .txt_field input{
+        position: relative;
+        width: 250px;
+        height: 33px;
+        left: 3%;
+        margin-top: 2.5%;
+        background: none;
+        outline: none;
+        border: none;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 15px;
+
+        color: rgb(0, 0, 0);
+    }
+    label[for="loginbtn2"]{
+        font-size: 25px;
+        color:#FFFFFF;
+        font-weight: 700;
+        margin-left: -10%;
+    }
+    #loginbtn2{
+        height:50px;
+        width: 50px;
+        margin-left: 50%;
+        box-sizing: border-box;
+        padding:0% 0 1% 0;
+        font-size: 30px;
+        color: white;
+        background-color: #BDABF2;
+        border: 0px;
+    }
+    img{
+        height:40px;
+        width: 40px;
+        margin: 10% 0 3% 29%;
+    }
+    #fb{
+        margin: 0% 0 20% 10%;
+    }
+    #signupformobile{
+        width: 130px;
+        height: 70px;
+        margin: 0% 0% 0% -10%;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+        
+        color: #FE8DDF;
+        background-size: 100px 100px;
+        background-color:#F9F6B3 ;
+        border-radius: 5px;
+    }
+    #forgotp{
+        margin: 0% 0 0 25%;
+        width: 180px;
+        height: 50px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+
+        color: #F9F6B3;
+        background: #FE8DDF;
+        border-radius: 5px;
+    }
+    #c1{
+        width: 550px;
+        height: 170px;
+        margin: -30% 0 0 -20% ;
+
+        background: #F9F6B3;
+        transform:  rotate(-10deg)
+    }
+    #c2{
+        width: 1000px;
+        height: 230px;
+        margin: -15% 0 0 -20% ;
+
+        background: #FFFFFF;
+        transform:  rotate(-20deg)
+    }
+}
