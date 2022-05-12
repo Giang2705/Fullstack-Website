@@ -16,10 +16,10 @@
         <h1 id="mobileh1">Create your account</h1>
         <form>
             <div class="txt_field">
-                <input type="text" required placeholder="Enter first your name">
+                <input type="text" id="firstname" required placeholder="Enter first your name">
             </div>
             <div class="txt_field">
-                <input type="text" required placeholder="Enter last your name">
+                <input type="text" id="lastname" required placeholder="Enter last your name">
             </div>
             <div class="txt_field">
                 <input type="email" required placeholder="Enter your email">
@@ -30,14 +30,15 @@
             <div class="txt_field">
                 <input type="password" id="confirmpassword" required placeholder="Confirm your password">
             </div>
+            <label for="browse">Upload your profile picture: </label><input id="browse" type="file">
             <div class="termservice">
                 <input id="t&s" type="checkbox">
                 <label for="t&s">I agree with all the statements in <a class="fw-bold text-decoration-underline" style="color: black;" href="#">Terms of service</a></label>
             </div>
-            <!-- <div><a href="#"><img src="./img/pngfind.com-dairy-queen-logo-png-6169174.png" alt="Sign up with Facebook"></a></div> -->
             <input id="registerbtn" class="fw-bold" type="submit" value="SIGN UP">
+            <input id="resetbtn" type="reset" value="CLEAR">
             <p id="returnlogin">Already have an account? <a class="fw-bold" style="color: black;" href="index.html">Login here</a></p>
-            <a href="index.html"><p id="back">Back</p></a>
+            <a id="back" href="index.html">Back</a>
         </form>
     </div>
     <div id="message">
@@ -45,10 +46,16 @@
         <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
         <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
         <p id="number" class="invalid">A <b>number</b></p>
-        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+        <p id="length" class="invalid">Between <b>8 and 20 characters</b></p>
     </div>
     <div id="message2">
         <p>Passwords do not match</p>
+    </div>
+    <div id="message3">
+        <p>Must between 2 and 20 characters</p>
+    </div>
+    <div id="message4">
+        <p>Must between 2 and 20 characters</p>
     </div>
     <script src="register.js"></script>
 </body>

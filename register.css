@@ -32,11 +32,12 @@
         width: 26.5%;
         height: 65%;
         left: 36%;
-        margin-top: 3%;
+        margin-top: 1%;
         background: #FFFFFF;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-sizing: border-box;
         border-radius: 46px;
+        font-family: 'Inter';
     }
     .signup h1{
         position: relative;
@@ -88,10 +89,21 @@
 
         color: rgb(0, 0, 0);
     }
+    #browse{
+        margin: 3% 0 10% 4%;
+        font-size: 1vw;
+        font-family: 'Inter';
+    }
+    label[for="browse"]{
+        margin: 0 0 0 5%;
+        font-size: 1vw;
+        font-family: 'Inter';
+    }
     form .termservice{
-        width: 90%;
-        margin: 0 0 0 7%;
+        width: 95%;
+        margin: -5% 0 0 7%;
         font-size: 0.8vw;
+        font-family: 'Inter';
     }
     #registerbtn{
         margin-top: 5%;
@@ -105,13 +117,25 @@
         border-radius: 15px;
         color: #FFFFFF;
         font-size: 1.5vw;
+        font-family: 'Inter';
+    }
+    #resetbtn{
+        width: fit-content;
+        margin: 6% 0 0 43%;
+        border: none;
+        background: none;
+        color: grey;
+        text-decoration: underline;
+        font-size: 0.8vw;
+        font-weight: 500;
+        font-family: 'Inter';
     }
     form p{
         position: relative;
         width: 100%;
         margin: 10% 0 5% 17%;
         font-size: 0.9vw;
-
+        font-family: 'Inter';
     }
     img{
         margin: 10% 0 0 45%;
@@ -133,7 +157,8 @@
         color: #000;
         position: relative;
         padding: 20px;
-        margin: -30% 0 0 65%;
+        margin: -43% 0 0 65%;
+        font-family: 'Inter';
     }
       
     #message p{
@@ -146,9 +171,34 @@
         width: 30%;
         position: relative;
         padding: 1%;
-        margin: -21% 0 0 63%;
+        margin: -24% 0 0 63%;
+        font-family: 'Inter';
     }
     #message2 p{
+        font-size: 1vw;
+        color: red;
+        font-weight: 700;
+    }
+    #message3{
+        margin: -42.5% 0 0 63%;
+        display: none;
+        background: none;
+        position: relative;
+        font-family: 'Inter';
+    }
+    #message3 p{
+        font-size: 1vw;
+        color: red;
+        font-weight: 700;
+    }
+    #message4{
+        margin: -38% 0 0 63%;
+        display: none;
+        background: none;
+        position: relative;
+        font-family: 'Inter';
+    }
+    #message4 p{
         font-size: 1vw;
         color: red;
         font-weight: 700;
@@ -167,7 +217,7 @@
     .signup{
         position: relative;
         width:50%;
-        margin: -100% 0 0 25%;
+        margin: -105% 0 0 25%;
         box-sizing: border-box;
         border-radius: 46px;
     }
@@ -196,6 +246,7 @@
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-sizing: border-box;
         border-radius: 15px;
+        font-family: 'Inter';
     }
     .txt_field input{
         position: relative;
@@ -214,10 +265,21 @@
 
         color: rgb(0, 0, 0);
     }
+    #browse{
+        margin: 3% 0 10% 10%;
+        font-size: 1.5vw;
+        font-family: 'Inter';
+    }
+    label[for="browse"]{
+        margin: 0 0 0 10%;
+        font-size: 1.5vw;
+        font-family: "Inter";
+    }
     .termservice{
         width: 90%;
-        margin: 0 0 0 15%;
+        margin: 0 0 0 11%;
         font-size: 1.5vw;
+        font-family: "Inter";
     }
     img{
         margin: 10% 0 0% 45%;
@@ -227,7 +289,7 @@
     #registerbtn{
         width: 50%;
         height: 5vw;
-        margin: 10% 0 0% 25%;
+        margin: 10% 0 10% 25%;
 
         background: #BDABF2;
         border: none;
@@ -235,13 +297,26 @@
         border-radius: 10px;
         color: #FFFFFF;
         font-size: 2vw;
+        font-family: 'Inter';
     }
-    form p{
-        width: 100%;
-        margin: 10% 0 0 45%;
+    #resetbtn{
+        margin: 0% 0 0% 30%;
+        width: fit-content;
+        font-size: 1.75vw;
+        background: none;
+        border: none;
+        color: grey;
+        text-decoration: underline;
+        font-family: 'Inter';
+    }
+    #back{
+        width: fit-content;
+        margin: 0% 0 0 15%;
         font-size: 2vw;
         color: grey;
         text-decoration: underline;
+        text-align: center;
+        font-family: 'Inter';
     }
     #returnlogin{
         display: none;
@@ -263,11 +338,13 @@
         transform: rotate(-10deg);
     }
     #message{
+        display: none;
         background:none;
         color: #000;
         position: relative;
         padding: 20px;
-        margin: -66% 0 0 70%;
+        margin: -76% 0 0 70%;
+        font-family: 'Inter';
     }
       
     #message p{
@@ -276,6 +353,7 @@
     }
     #message h3{
          font-size: 2vw; 
+         font-family: 'Inter';
     }
     #message2{
         display: none;
@@ -283,9 +361,34 @@
         width: 30%;
         position: relative;
         padding: 1%;
-        margin: -38% 0 0 70%;
+        margin: -40% 0 0 70%;
+        font-family: 'Inter';
     }
     #message2 p{
+        font-size: 2vw;
+        color: red;
+        font-weight: 700;
+    }
+    #message3{
+        margin: -75% 0 0 72%;
+        display: none;
+        background: none;
+        position: relative;
+        font-family: 'Inter';
+    }
+    #message3 p{
+        font-size: 2vw;
+        color: red;
+        font-weight: 700;
+    }
+    #message4{
+        margin: -66% 0 0 72%;
+        display: none;
+        background: none;
+        position: relative;
+        font-family: 'Inter';
+    }
+    #message4 p{
         font-size: 2vw;
         color: red;
         font-weight: 700;
@@ -304,9 +407,10 @@
     .signup{
         position: relative;
         width:50%;
-        margin: -140% 0 0 25%;
+        margin: -130% 0 0 25%;
         box-sizing: border-box;
         border-radius: 46px;
+        font-family: 'Inter';
     }
     .signup h1{
         width: 70%;
@@ -333,6 +437,7 @@
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-sizing: border-box;
         border-radius: 15px;
+        font-family: 'Inter';
     }
     .txt_field input{
         position: relative;
@@ -351,15 +456,31 @@
 
         color: rgb(0, 0, 0);
     }
+    #browse{
+        margin: 3% 0 10% 10%;
+        font-size: 1.5vw;
+        font-family: 'Inter';
+    }
+    label[for="browse"]{
+        margin: 0 0 0 10%;
+        font-size: 1.5vw;
+        font-family: "Inter";
+    }
     .termservice{
         width: 90%;
         margin: 0 0 0 15%;
         font-size: 1.5vw;
+        font-family: 'Inter';
     }
-    img{
-        margin: 10% 0 0% 45%;
-        width: 10%;
-        height: 10%;
+    #resetbtn{
+        margin: 0% 0 0% 30%;
+        width: fit-content;
+        font-size: 1.75vw;
+        background: none;
+        border: none;
+        color: grey;
+        text-decoration: underline;
+        font-family: 'Inter';
     }
     #registerbtn{
         width: 50%;
@@ -372,13 +493,16 @@
         border-radius: 10px;
         color: #FFFFFF;
         font-size: 2vw;
+        font-family: 'Inter';
     }
-    form p{
-        width: 100%;
-        margin: 10% 0 0 45%;
+    #back{
+        width: fit-content;
+        margin: 0% 0 0 15%;
         font-size: 2vw;
         color: grey;
         text-decoration: underline;
+        text-align: center;
+        font-family: 'Inter';
     }
     #returnlogin{
         display: none;
@@ -400,16 +524,16 @@
         transform: rotate(-10deg);
     }
     #message{
-        /* display:none; */
+        display:none;
         background:none;
         color: #000;
         position: relative;
         padding: 20px;
         margin: 0% 0 0 30%;
+        font-family: 'Inter';
     }
       
     #message p{
-        padding: 10px 35px;
         font-size: 1.3vw;
     }
     #message h3{
@@ -421,11 +545,37 @@
         width: 30%;
         position: relative;
         padding: 1%;
-        margin: -39% 0 0 70%;
+        margin: -37% 0 0 70%;
+        font-family: 'Inter';
     }
     #message2 p{
         font-size: 2vw;
         color: red;
         font-weight: 700;
+    }
+    #message3{
+        margin: -72% 0 0 72%;
+        display: none;
+        background: none;
+        position: relative;
+        font-family: 'Inter';
+    }
+    #message3 p{
+        font-size: 2vw;
+        color: red;
+        font-weight: 700;
+    }
+    #message4{
+        margin: -63% 0 0 72%;
+        display: none;
+        background: none;
+        position: relative;
+        font-family: 'Inter';
+    }
+    #message4 p{
+        font-size: 2vw;
+        color: red;
+        font-weight: 700;
     }  
+    
 }
