@@ -1,4 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+/* Add a green text color and a checkmark when the requirements are right */
+.valid{
+    color: green;
+}
+  
+.valid:before{
+    position: relative;
+    left: -35px;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+.invalid{
+    color: red;
+}
+  
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
 @media screen and (min-width: 1024px) {
     body{
         margin: 0;
@@ -8,10 +29,10 @@
     }
     .signup{
         position: relative;
-        width: 35%;
-        height: 750px;
-        left: 34%;
-        margin-top: 2%;
+        width: 26.5%;
+        height: 65%;
+        left: 36%;
+        margin-top: 3%;
         background: #FFFFFF;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-sizing: border-box;
@@ -19,15 +40,14 @@
     }
     .signup h1{
         position: relative;
-        width: 283px;
-        height: 100px;
-        left: 23%;
-        top: 0%;
+        width: 100%;
+        height: 20%;
+        margin: 10% 0 7% 22%;
 
         font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
-        font-size: 35px;
+        font-size: 2vw;
         line-height: 42px;
         display: flex;
         align-items: center;
@@ -41,11 +61,9 @@
     }
     form .txt_field{
         position: relative;
-        width: 400px;
+        width: 93%;
         height: 50px;
-        margin-bottom: 10%;
-        left: 3%;
-        top: 100%;
+        margin: 10% 0 10% 3%;
 
         background: #fffdd98f;
         border: 1px solid rgba(0, 0, 0, 0.2);
@@ -54,11 +72,9 @@
     }
     .txt_field input{
         position: relative;
-        width: 187px;
-        height: 33px;
-        padding: 0 5px;
-        margin-top: 2%;
-        left: 1%;
+        width: 100%;
+        height: 100%;
+        padding: 2%;
         background: none;
         outline: none;
         border: none;
@@ -66,44 +82,350 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 0.8vw;
         line-height: 17px;
         display: flex;
 
         color: rgb(0, 0, 0);
     }
     form .termservice{
-        position: relative;
-        width: 391px;
-        height: 39px;
-        left: 5%;
-        top: 100%;
+        width: 90%;
+        margin: 0 0 0 7%;
+        font-size: 0.8vw;
     }
     #registerbtn{
-        position: relative;
         margin-top: 5%;
-        width: 400px;
-        height: 57px;
-        left: 3%;
+        width: 93%;
+        height: 3vw;
+        margin: 10% 0 0 4%;
 
         background: #BDABF2;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-sizing: border-box;
         border-radius: 15px;
         color: #FFFFFF;
-        font-size: 20px;
+        font-size: 1.5vw;
     }
     form p{
         position: relative;
-        width: 284px;
-        height: 91px;
-        margin-top: 10%;
-        left: 17%;
+        width: 100%;
+        margin: 10% 0 5% 17%;
+        font-size: 0.9vw;
+
     }
     img{
-        margin-top:5%;
-        height: 40px;
-        width: 40px;
-        margin-left: 46%;
+        margin: 10% 0 0 45%;
+        height: 10%;
+        width: 10%;
     }
+    #mobileh1{
+        display: none;
+    }
+    #c1 #c2{
+        display: none;
+    }
+    #back{
+        display: none;
+    }
+    #message{
+        display:none;
+        background:none;
+        color: #000;
+        position: relative;
+        padding: 20px;
+        margin: -30% 0 0 65%;
+    }
+      
+    #message p{
+        padding: 10px 35px;
+        font-size: 1vw;
+    }
+    #message2{
+        display: none;
+        background: none;
+        width: 30%;
+        position: relative;
+        padding: 1%;
+        margin: -21% 0 0 63%;
+    }
+    #message2 p{
+        font-size: 1vw;
+        color: red;
+        font-weight: 700;
+    }
+}
+@media screen and (min-width: 768px) and (max-width :1023px){
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #F9F6B3;
+        overflow: hidden;
+    }
+    #desktoph1{
+        display: none;
+    }
+    .signup{
+        position: relative;
+        width:50%;
+        margin: -100% 0 0 25%;
+        box-sizing: border-box;
+        border-radius: 46px;
+    }
+    .signup h1{
+        width: 70%;
+        height: 30%;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 5vw;
+
+        color: #FE8DDF;
+    }
+    .signup form{
+        padding: 0;
+        box-sizing: border-box;
+    }
+    form .txt_field{
+        position: relative;
+        width: 80%;
+        height: 6vw;
+        margin: 5% 0 5% 10%;
+
+        background: rgba(255, 254, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+    .txt_field input{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 2%;
+        background: none;
+        outline: none;
+        border: none;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5vw;
+        line-height: 17px;
+
+        color: rgb(0, 0, 0);
+    }
+    .termservice{
+        width: 90%;
+        margin: 0 0 0 15%;
+        font-size: 1.5vw;
+    }
+    img{
+        margin: 10% 0 0% 45%;
+        width: 10%;
+        height: 10%;
+    }
+    #registerbtn{
+        width: 50%;
+        height: 5vw;
+        margin: 10% 0 0% 25%;
+
+        background: #BDABF2;
+        border: none;
+        box-sizing: border-box;
+        border-radius: 10px;
+        color: #FFFFFF;
+        font-size: 2vw;
+    }
+    form p{
+        width: 100%;
+        margin: 10% 0 0 45%;
+        font-size: 2vw;
+        color: grey;
+        text-decoration: underline;
+    }
+    #returnlogin{
+        display: none;
+    }
+    #c1{
+        position: sticky;
+        width: 100%;
+        height: 50vw;
+        margin: 70% 0 0 20%;
+        background: #FFFFFF;
+        transform: rotate(-20deg);
+    }
+    #c2{
+        position: sticky;
+        width: 70%;
+        height: 30vw;
+        margin: -40% 0 0 55%;
+        background: #FFDEF6;
+        transform: rotate(-10deg);
+    }
+    #message{
+        background:none;
+        color: #000;
+        position: relative;
+        padding: 20px;
+        margin: -66% 0 0 70%;
+    }
+      
+    #message p{
+        padding: 10px 35px;
+        font-size: 1.3vw;
+    }
+    #message h3{
+         font-size: 2vw; 
+    }
+    #message2{
+        display: none;
+        background: none;
+        width: 30%;
+        position: relative;
+        padding: 1%;
+        margin: -38% 0 0 70%;
+    }
+    #message2 p{
+        font-size: 2vw;
+        color: red;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width: 767px){
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #F9F6B3;
+        overflow: hidden;
+    }
+    #desktoph1{
+        display: none;
+    }
+    .signup{
+        position: relative;
+        width:50%;
+        margin: -140% 0 0 25%;
+        box-sizing: border-box;
+        border-radius: 46px;
+    }
+    .signup h1{
+        width: 70%;
+        height: 30%;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 5vw;
+
+        color: #FE8DDF;
+    }
+    .signup form{
+        padding: 0;
+        box-sizing: border-box;
+    }
+    form .txt_field{
+        position: relative;
+        width: 80%;
+        height: 6vw;
+        margin: 5% 0 5% 10%;
+
+        background: rgba(255, 254, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+    .txt_field input{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 2%;
+        background: none;
+        outline: none;
+        border: none;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5vw;
+        line-height: 17px;
+
+        color: rgb(0, 0, 0);
+    }
+    .termservice{
+        width: 90%;
+        margin: 0 0 0 15%;
+        font-size: 1.5vw;
+    }
+    img{
+        margin: 10% 0 0% 45%;
+        width: 10%;
+        height: 10%;
+    }
+    #registerbtn{
+        width: 50%;
+        height: 5vw;
+        margin: 10% 0 0% 25%;
+
+        background: #BDABF2;
+        border: none;
+        box-sizing: border-box;
+        border-radius: 10px;
+        color: #FFFFFF;
+        font-size: 2vw;
+    }
+    form p{
+        width: 100%;
+        margin: 10% 0 0 45%;
+        font-size: 2vw;
+        color: grey;
+        text-decoration: underline;
+    }
+    #returnlogin{
+        display: none;
+    }
+    #c1{
+        position: sticky;
+        width: 100%;
+        height: 50vw;
+        margin: 100% 0 0 20%;
+        background: #FFFFFF;
+        transform: rotate(-20deg);
+    }
+    #c2{
+        position: sticky;
+        width: 70%;
+        height: 30vw;
+        margin: -35% 0 0 55%;
+        background: #FFDEF6;
+        transform: rotate(-10deg);
+    }
+    #message{
+        /* display:none; */
+        background:none;
+        color: #000;
+        position: relative;
+        padding: 20px;
+        margin: 0% 0 0 30%;
+    }
+      
+    #message p{
+        padding: 10px 35px;
+        font-size: 1.3vw;
+    }
+    #message h3{
+        font-size: 2vw; 
+    }
+    #message2{
+        display: none;
+        background: none;
+        width: 30%;
+        position: relative;
+        padding: 1%;
+        margin: -39% 0 0 70%;
+    }
+    #message2 p{
+        font-size: 2vw;
+        color: red;
+        font-weight: 700;
+    }  
 }
