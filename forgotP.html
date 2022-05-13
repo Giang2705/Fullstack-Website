@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="forgotP.css">
 </head>
 <body>
+    <div id="c1" class="rounded-circle"></div>
+    <div id="c2" class="rounded-circle"></div>
     <div class="forgetp">
         <h1>Forget Password</h1>
-        <p>Enter your email address or username</p>
         <form action="">
             <div class="txt_field">
                 <input type="email" placeholder="Enter your email">
@@ -24,9 +25,9 @@
                 <input type="text" placeholder="Enter your username" >
             </div>
             <div>
-                <input id="sendbtn" class="fw-bold" type="submit" value="Send email verification">
+                <a href="verify.html"><input id="sendbtn" class="fw-bold" type="submit" value="Send email verification"></a>
             </div>
-            <p><a style="font-size:20px ; margin:30% 0 0 25%;; ; color: grey;" href="index.html">Back</a></p>
+            <p id="back"><a href="index.html">Back</a></p>
         </form>
     </div>
 </body>
