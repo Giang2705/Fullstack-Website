@@ -46,7 +46,7 @@
         return $html;
     }
 
-    echo get_html('user_db.csv');
+    echo get_html('accounts_db.csv');
 ?>
 </body>
 </html>
