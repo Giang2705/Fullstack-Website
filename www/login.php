@@ -22,7 +22,7 @@ while(list($no, $firstName, $lastName, $email, $password, $userType)=fgetcsv($fh
         }
     }elseif((($name==$email)&&($pass!==$password)) ||(($name!==$email)&&($pass==$password))){
         while($error<1){
-        header("Location:index.html");
+        header("Location:index.php");
         $error=$error+1;
         }
         }

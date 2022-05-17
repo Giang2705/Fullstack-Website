@@ -1,6 +1,5 @@
 <?php
     session_start();
-    
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Tuan Thang | InsaKilogram</title>
+    <title><?php echo $_SESSION['firstName']?> | InsaKilogram</title>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- bootstrap navbar -->
     <!-- font word for logo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,7 +63,7 @@
 
                 <div class="avatar">
 
-                    <img src="./img/avatar.JPG" alt="user-image" width="200" height="200">
+                    <img src="../img/avatar.JPG" alt="user-image" width="200" height="200">
 
                 </div>
 

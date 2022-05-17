@@ -6,6 +6,10 @@ $password = '';
 $userType = '';
 // $imgProfile = '';
 
+$csv='accounts_db.csv';
+$fh=fopen($csv,'r');
+$error='';
+
 function clean_text($string)
 {
  $string = trim($string);
@@ -15,7 +19,6 @@ function clean_text($string)
 }
 
 if (isset($_POST["submit"])){
-
     $fName = clean_text($_POST["fName"]); 
     $lName = clean_text($_POST["lName"]);
     $email = clean_text($_POST["email"]);
@@ -48,6 +51,7 @@ if (isset($_POST["submit"])){
     $userType = '';
 }
 
+header('Location: index.html')
 ?>
 
 <!DOCTYPE html>
