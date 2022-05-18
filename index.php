@@ -57,15 +57,5 @@
   </main>
 
   <hr>
-  <!-- footer -->
-  <footer>
-        <div class="footer-container">
-            <div class="footer-outer">
-                <div class="sub">
-                    <p>2022 Instakilogram</p> 
-                </div>
-            </div>
-        </div>
-  </footer>
 </body>
 </html>

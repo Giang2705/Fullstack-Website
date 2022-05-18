@@ -1,12 +1,5 @@
 <?php
     session_start();
-    $status = '';
-    $audience = '';
-
-    $csv='./data/status.csv';
-    $fh=fopen($csv,'r');
-    $error='';
-
     function clean_text($string)
     {
     $string = trim($string);
@@ -68,7 +61,7 @@ if (isset($_POST['submit_image'])){
               <ul>
                 <li><a href="#">Profile</a></li>
                 <li><a href="./settingmenu.php">Setting</a></li>
-                <li><a href="#">Log-out</a></li>
+                <li><a href="index.php">Log-out</a></li>
               </ul>
             </li>
           </ul>

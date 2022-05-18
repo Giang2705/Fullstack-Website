@@ -2,7 +2,7 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<htmml lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,13 +69,13 @@ session_start();
     <h1>Admin Page</h1>
     <div class="avatar">
 
-                    <img src="./data/profileImage/avartar_<?php echo $_SESSION['no']?>.jpg" alt="user-image" width="200" height="200">
+                    <img src="./data/profileImage/avartar_0.jpg" alt="user-image" width="200" height="200">
 
                 </div>
 
                 <div class="profile-setting">
 
-                    <h1 class="user-name"><?php echo $_SESSION['firstName']?></h1>
+                    <h1 class="user-name">Giang</h1>
 
                 </div>
     <?php
@@ -139,4 +139,4 @@ session_start();
 </body>
 
 <script src="./admin.js"></script>
-</html>
+</htmml>

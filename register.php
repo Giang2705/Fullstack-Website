@@ -131,7 +131,7 @@ if (isset($_POST["submit"])){
 
         <form action="register.php" method="post" enctype="multipart/form-data">
             <div class="txt_field">
-                <input type="text" id="firstname" name="fName" value="<?php echo $no; ?>" required readonly>
+                <input type="hide" id="" name="" value="<?php echo $no; ?>" required readonly>
             </div>
             <div class="txt_field">
                 <input type="text" id="firstname" name="fName" value="<?php echo $fName; ?>" required placeholder="Enter first your name">
@@ -158,7 +158,7 @@ if (isset($_POST["submit"])){
                 <input type="password" id="confirmpassword" name="cPass" required placeholder="Confirm your password">
             </div>
             <div>
-                <select class="form-control" name="user_type" id="" <?php echo $userType;?>>
+                <select class="form-control" name="user_type" id="" <?php echo $userType;?> hidden>
                     <option value="user">User</option>
                     <option value="admin">Admin</option>
                 </select>
