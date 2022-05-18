@@ -1,0 +1,821 @@
+/* header */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+
+}
+.Navbar{
+  background: #FFDEF6;
+  width: 100%;
+  top: 0;
+}
+.Navbar nav{
+  position: relative;
+  display: flex;
+  max-width: calc(70% - 200px);
+  margin: 0 auto;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .content{
+  display: flex;
+  align-items: center;
+}
+nav .content .links{
+  margin-left: 80px;
+  display: flex;
+}
+.content .logo a{
+    width: 105px;
+    height: 45px;
+  
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    align-items: center;
+    text-align: center;
+  
+    mix-blend-mode: normal;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.content .links li{
+  list-style: none;
+  line-height: 70px;
+}
+.content .links li a,
+.content .links li label{
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 17px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.content .links li label{
+  display: none;
+}
+.content .links li a:hover,
+.content .links li label:hover{
+  background: #BDABF2;
+}
+.Navbar .search-icon,
+.Navbar .menu-icon{
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 70px;
+  width: 10px;
+  text-align: center;
+}
+.Navbar .menu-icon{
+  display: none;
+}
+.Navbar #show-search:checked ~ .search-icon i::before{
+  content: "\f00d";
+}
+
+.Navbar .search-box{
+  position: absolute;
+  height: 100%;
+  max-width: calc(100% - 50px);
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.Navbar #show-search:checked ~ .search-box{
+  opacity: 1;
+  pointer-events: auto;
+}
+.search-box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  background: #FFFDD9;
+  padding: 0 100px 0 15px;
+}
+.search-box input::placeholder{
+  color: #3c3c3c;
+}
+.search-box .go-icon{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 60px;
+  width: 70px;
+  background: #FFFDD9;
+  border: none;
+  outline: none;
+  color: #BDABF2;
+  font-size: 20px;
+  cursor: pointer;
+}
+.Navbar input[type="checkbox"]{
+  display: none;
+}
+
+.content .links ul{
+  position: absolute;
+  background: #BDABF2;
+  top: 80px;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+.content .links li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.content .links ul li a{
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  border-radius: 0px!important;
+}
+.content .links ul ul{
+  position: absolute;
+  top: 0;
+  right: calc(-100% + 8px);
+}
+.content .links ul li{
+  position: relative;
+}
+.content .links ul li:hover ul{
+  top: 0;
+}
+
+@media screen and (max-width: 1250px){
+  .Navbar nav{
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  nav .content .links{
+    margin-left: 30px;
+  }
+  .content .links li a{
+    padding: 8px 13px;
+  }
+  .Navbar .search-box{
+    max-width: calc(100% - 100px);
+  }
+  .Navbar .search-box input{
+    padding: 0 100px 0 15px;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .Navbar .menu-icon{
+    display: block;
+  }
+  .Navbar #show-menu:checked ~ .menu-icon i::before{
+    content: "\f00d";
+  }
+  nav .content .links{
+    display: block;
+    position: fixed;
+    background: #BDABF2;
+    height: 100%;
+    width: 100%;
+    top: 20%;
+    left: -100%;
+    margin-left: 0;
+    max-width: 350px;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    transition: all 0.3s ease;
+  }
+  nav #show-menu:checked ~ .content .links{
+    left: 0%;
+  }
+  .content .links li{
+    margin: 15px 20px;
+  }
+  .content .links li a,
+  .content .links li label{
+    line-height: 40px;
+    font-size: 20px;
+    display: block;
+    padding: 8px 18px;
+    cursor: pointer;
+  }
+  .content .links li a.desktop-link{
+    display: none;
+  }
+
+  .content .links ul,
+  .content .links ul ul{
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    max-height: 0px;
+    overflow: hidden;
+  }
+  .content .links #show-features:checked ~ ul,
+  .content .links #show-services:checked ~ ul,
+  .content .links #show-items:checked ~ ul{
+    max-height: 100vh;
+  }
+  .content .links ul li{
+    margin: 7px 20px;
+  }
+  .content .links ul li a{
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 5px!important;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .Navbar nav{
+    padding: 0 10px;
+  }
+  .content .logo a{
+    font-size: 27px;
+  }
+  .Navbar .search-box{
+    max-width: calc(100% - 70px);
+  }
+  .Navbar .search-box .go-icon{
+    width: 30px;
+    right: 0;
+  }
+  .Navbar .search-box input{
+    padding-right: 30px;
+  }
+}
+
+.Post {
+  padding: 16px;
+  margin-top: 30px;
+  height: 2000px;
+}
+
+/* main */
+/* login page */
+@media screen and (min-width: 1024px) {
+    .login {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            background-color:#FFFDD9;
+            overflow: hidden;
+    }
+    
+    .login main{
+        display: flex;
+        justify-content: center;
+        margin: 4% auto;
+    }
+    
+    .login .loginForm{
+            width: 20%;
+            height: 55%;
+            background: #FCFCFD;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            border-radius: 24px;
+            min-width: 300px ;
+    }
+    
+    .loginForm #login{
+        position: relative;
+        width: 15%;
+        height: 15%;
+        left: 32%;
+        top: 10%;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.5vw;
+        line-height: 48px;
+        text-align: center;
+        
+        color: #FE8DDF;
+    }
+    
+    .loginForm #welcome{
+        display: none;
+    }
+    .loginForm p{
+        position: relative;
+        width: 50%;
+        height: 5%;
+        left: 23%;
+        top: 6%;
+        margin-bottom: 15%;
+    
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.9vw;
+        line-height: 18px;
+        text-align: center;
+    
+        color: #000000;
+    }
+    .loginForm form{
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+    
+    form .txt_field{
+        position: relative;
+        width: 96%;
+        height: 10%;
+        margin-bottom: 6%;
+        left: 1%;
+    
+        background: rgba(230, 227, 227, 0.5);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+    .txt_field input{
+        position: relative;
+        width: 80%;
+        height: 35px;
+        margin-top: 0.5%;
+        left: 1%;
+        background: none;
+        outline: none;
+        border: none;
+    
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.9vw;
+        line-height: 15px;
+    
+        color: rgb(0, 0, 0);
+    }
+    #loginbtn{
+        position: relative;
+        width: 96%;
+        height: 54px;
+        left: 1%;
+        margin-top: 5%;
+    
+        background: #BDABF2;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 15px;
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+    
+    #loginbtn2{
+        display: none;
+    }
+    label[for="loginbtn2"]{
+        display: none;
+    }
+    .signup_link{
+        position: absolute;
+        width: 20%;
+        height: 7%;
+        left: 75%;
+        padding: 1%;
+        top: 72%;
+        min-width: 300px ;
+    
+        background: #FCFCFD;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 24px;
+    }
+    .signup_link p{
+        position: relative;
+        width: 100%;
+        height: 30%;
+        margin-top: 5%;
+    
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 0.9vw;
+        line-height: 10%;
+        text-align: center;
+    
+        color: #000000;
+    }
+    form #hr1{
+        position: relative;
+        width: 35%;
+        height: 0px;
+        float:left;
+        left: 2%;
+        margin: 15% 0 5% 0;
+        border: 1px solid rgba(0, 0, 0, 0.35);
+    }
+    form #or{
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        float: left;
+        color: grey;
+    
+        margin: 10% 0 5% 8.5%;
+        font-weight: 700;
+        text-align: center;
+        font-size: 1.5vw;
+    }
+    form #hr2{
+        position: relative;
+        width: 35%;
+        height: 0px;
+        float:right;
+        right: 2%;
+        margin: 15% 0 5% 0;
+        border: 1px solid rgba(0, 0, 0, 0.35);
+    }
+    form #fb{
+        clear: both;
+        text-align: center;
+        margin:0 0 5% 3%;
+        font-size: 0.9vw;
+    }
+    .square{
+        position: absolute;
+        bottom: 0%;
+        width: 69%;
+        height: 100%;
+        background: #FFDEF6;
+    }
+    .rounded-circle{
+        display: none;
+    }
+    img{
+        margin-bottom: 5%;
+        height: 10%;
+        width: 10%;
+        margin-left: 45%;
+    }
+    #forgotp{
+        margin: 0% 0 0 33%;
+        font-size: 0.7vw;
+        text-align: center;
+    
+    }
+    }
+    
+    @media screen and (min-width: 768px) and (max-width :1023px){
+        body{
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            background-color:#FDD1F1;
+            overflow: hidden;
+        }
+        .right #login{
+            display: none;
+        }
+        .right p{
+            display: none;
+        }
+        form #loginbtn{
+            display: none;
+        }
+        .signup_link{
+            display: none;
+        }
+        #hr1{
+            display: none;
+        }
+        #hr2{
+            display: none;
+        }
+        #or{
+            display: none;
+        }
+        .square{
+            display: none;
+        }
+        .right{
+            position: absolute;
+            width: 50%;
+            height: 70%;
+            left: 30%;
+            top: 15%;
+            box-sizing: border-box;
+            border-radius: 24px;
+            /* background: #fd4141; */
+        }
+        .right #welcome{
+            z-index: 3;
+            width: 50%;
+            font-size: 50px;
+            font-weight: 700;
+            margin: 0 15% 15% -10%;
+            color: #fd85dd;
+        }
+        .right form{
+            padding: 0 10%;
+            box-sizing: border-box;
+        }
+        form .txt_field{
+            position: relative;
+            width: 95%;
+            height: 30%;
+            margin-bottom: 6%;
+    
+            background: #ffffffb7;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+        .txt_field input{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            left: 3%;
+            margin: 2.5%;
+            background: none;
+            outline: none;
+            border: none;
+    
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 15px;
+    
+            color: rgb(0, 0, 0);
+        }
+        label[for="loginbtn2"]{
+            font-size: 25px;
+            color:#FFFFFF;
+            font-weight: 700;
+            margin: 10% 0 0 0%;
+        }
+        #loginbtn2{
+            height: 10%;
+            width: 15%;
+            margin: 0% 0 0% 50%;
+            padding-bottom: 1%;
+            box-sizing: border-box;
+       
+            font-size: 30px;
+            color: white;
+            background-color: #BDABF2;
+            border: 0px;
+        }
+        img{
+            height:40px;
+            width: 40px;
+            margin: 10% 0 0% 45%;
+        }
+        #fb{
+            margin: 5% 0 20% 25%;
+        }
+        #signupformobile{
+            width: 20%;
+            height: 5%;
+            /* margin: 0% 0% 0% -10%; */
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 50px;
+            text-align: center;
+            
+            color: #FE8DDF;
+            background-size: 100px 100px;
+            background-color:#F9F6B3 ;
+            border-radius: 5px;
+        }
+        #forgotp{
+            margin: 0% 0 0 25%;
+            width: 30%;
+            height: 5%;
+    
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 50px;
+            text-align: center;
+    
+            color: #F9F6B3;
+            background: #FE8DDF;
+            border-radius: 5px;
+        }
+        #c1{
+            width: 650px;
+            height: 270px;
+            margin: -50% 0 0 -20% ;
+            background: #F9F6B3;
+            transform:  rotate(-10deg)
+        }
+        #c2{
+            width: 1100px;
+            height: 330px;
+            margin: -10% 0 0 -25% ;
+            background: #FFFFFF;
+            transform:  rotate(-25deg)
+        }
+    }
+    @media screen and (max-width: 767px){
+        body{
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            background-color:#FDD1F1;
+            overflow: hidden;
+        }
+        .right #login{
+            display: none;
+        }
+        .right p{
+            display: none;
+        }
+        form #loginbtn{
+            display: none;
+        }
+        .signup_link{
+            display: none;
+        }
+        #hr1{
+            display: none;
+        }
+        #hr2{
+            display: none;
+        }
+        #or{
+            display: none;
+        }
+        .square{
+            display: none;
+        }
+        .right{
+            position: absolute;
+            width: 55%;
+            height: 70%;
+            left: 30%;
+            top: 15%;
+            padding: 0 auto;
+            box-sizing: border-box;
+            border-radius: 24px;
+            /* background: #fd4141; */
+        }
+        .right #welcome{
+            z-index: 3;
+            width: 50%;
+            font-size: 7vw;
+            font-weight: 700;
+            margin: 0 15% 15% -10%;
+            color: #fd85dd;
+        }
+        .right form{
+            box-sizing: border-box;
+        }
+        form .txt_field{
+            position: relative;
+            width: 80%;
+            height: 30%;
+            margin-bottom: 6%;
+    
+            background: #ffffffb7;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+        .txt_field input{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            left: 3%;
+            margin: 2.5%;
+            background: none;
+            outline: none;
+            border: none;
+    
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 2vw;
+            line-height: 15px;
+    
+            color: rgb(0, 0, 0);
+        }
+        label[for="loginbtn2"]{
+            font-size: 3.5vw;
+            color:#FFFFFF;
+            font-weight: 700;
+            margin: 10% 0 0 5%;
+        }
+        #loginbtn2{
+            height: 8%;
+            width: 14%;
+            margin: 0% 0 0% 35%;
+            padding-bottom: 2%;
+            box-sizing: border-box;
+       
+            font-size: 4vw;
+            color: white;
+            background-color: #BDABF2;
+            border: none;
+        }
+        img{
+            height:40px;
+            width: 40px;
+            margin: 15% 0 0% 38%;
+        }
+        #fb{
+            margin: 5% 0 40% 23%;
+            font-size: 2vw;
+        }
+        #signupformobile{
+            width: 20%;
+            height: 5%;
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.5vw;
+            line-height: 50px;
+            text-align: center;
+            
+            color: #FE8DDF;
+            background-size: 100px 100px;
+            background-color:#F9F6B3 ;
+            border-radius: 5px;
+        }
+        #forgotp{
+            margin: 0% 0 0 20%;
+            width: 10%;
+            height: 5%;
+    
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.5vw;
+            line-height: 50px;
+            text-align: center;
+    
+            color: #F9F6B3;
+            background: #FE8DDF;
+            border-radius: 5px;
+        }
+        #c1{
+            width: 650px;
+            height: 270px;
+            margin: -50% 0 0 -20% ;
+    
+            background: #F9F6B3;
+            transform:  rotate(-10deg)
+        }
+        #c2{
+            width: 1100px;
+            height: 330px;
+            margin: -10% 0 0 -25% ;
+    
+            background: #FFFFFF;
+            transform:  rotate(-25deg)
+        }
+    }
+
+/* footer */
+footer{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.footer-container{
+    padding-bottom: 3%;
+    text-align: center;
+    margin-bottom: 0;
+}
+.footer-inner{
+    margin-bottom: 25px;
+}
+.footer-inner a{
+    font-size: 20px;
+    color: grey;
+    text-decoration: none;
+    margin: 0 3% 0 3%;
+}
+.sub{
+    margin-right: 60px;
+}
