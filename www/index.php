@@ -40,8 +40,8 @@
             <li><a href="#">Notification</a></li>
             <li>
               <a href="#" class="desktop-link">Account</a>
-              <input type="checkbox" id="show-features">
-              <label for="show-features">Features</label>
+              <input type="checkbox" id="show-Account">
+              <label for="show-Account">Account</label>
               <ul>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Setting</a></li>
