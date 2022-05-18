@@ -36,21 +36,10 @@
         <div class="content">
         <div class="logo"><a href="index.php">InstarKilogram</a></div>
           <ul class="links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Notification</a></li>
-            <li>
-              <a href="#" class="desktop-link">Account</a>
-              <input type="checkbox" id="show-Account">
-              <label for="show-Account">Account</label>
-              <ul>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Setting</a></li>
-                <li><a href="#">Log-out</a></li>
-              </ul>
-            </li>
+            <li><a href="login.php">Log in</a></li>
           </ul>
         </div>
-        <a href="login.php" class="login">Log in</a>
+        <!-- <a href="login.php" class="login">Log in</a> -->
         <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
         <form action="#" class="search-box">
           <input type="text" placeholder="Type Something to Search..." required>
@@ -63,6 +52,7 @@
   <main>
     <div class="welcome">
         <h1>Welcome to our Instakilogram!</h1>
+        <p><a href="register.php">Sign up</a> to join the socialble community</p>
     </div>
   </main>
 
@@ -71,13 +61,6 @@
   <footer>
         <div class="footer-container">
             <div class="footer-outer">
-                <div class="footer-inner">
-                    <a href="#">About</a>
-                    <a href="#">Help</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Copyrights</a>
-                    <a href="#">Privacy</a>
-                </div>
                 <div class="sub">
                     <p>2022 Instakilogram</p> 
                 </div>
