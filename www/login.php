@@ -68,7 +68,7 @@
                 <p>Sign in to your account</p>
                 <form method="post" action="check_login.php">
                     <div class="txt_field">
-                        <input name="username" type="text" required placeholder="Username">
+                        <input name="username" type="text" required placeholder="Email">
                     </div>
                     <div class="txt_field">
                         <input name="password" type="password" required placeholder="Password">
@@ -81,7 +81,6 @@
                     <hr id="hr2">
                     <div id="fb"><a class="my-5 text-decoration-none fw-bolder" style="color: #193d97;" href="#">Log in with Facebook</a></div>
                     <a id="signupformobile" class="text-decoration-none" href="register.php">Sign up</a>
-                    <a id="forgotp" class="text-decoration-none" href="forgotP.php">Forgot Password?</a>
                 </form>
             </div>
         </main>

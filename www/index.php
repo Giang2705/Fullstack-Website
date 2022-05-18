@@ -62,7 +62,7 @@
   <!-- main -->
   <main>
     <div class="welcome">
-        <h1>Welcome</h1>
+        <h1>Welcome to our Instakilogram!</h1>
     </div>
   </main>
 

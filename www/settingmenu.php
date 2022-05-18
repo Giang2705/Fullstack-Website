@@ -140,6 +140,7 @@
             </div>
         </div>
     </div>
+    <hr>
     <footer>
         <div class="footer-container">
             <div class="footer-outer">

@@ -9,8 +9,8 @@ session_start();
 
         for ($i = 0; $i <= $count; $i++){
             if (isset($_POST['btnDelete_'.$i.''])){
-                unset($data[$i]);
                 $n = $i-1;
+                unset($data[$n]);
                 $filename = "./data/profileImage/avartar_$n.jpg";
                 unlink($filename);
                 $_SESSION['no'] += 1;

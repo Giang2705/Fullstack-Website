@@ -1,35 +1,5 @@
 <?php
 session_start();
-
-if (isset($_POST['submit_image'])){
-
-$csv='./data/accounts_db.csv';
-$fh=fopen($csv,'r');
-$error=0;
-$count = 0;
-    
-    if (($handle = fopen("./data/accounts_db.csv", "r")) !== FALSE) {
-      while (($csvadata = fgetcsv($handle, 0, ",")) !== FALSE) {      
-        $count++;
-        }
-        fclose($handle);
-    }
-
-    
-    $extention = pathinfo($_FILES["imgProfile"]["name"], PATHINFO_EXTENSION);
-
-    $rename = 'avartar_'.$_SESSION['no'].'';
-
-    echo $rename;
-    $newname = $rename.'.'.$extention;
-    
-    
-    move_uploaded_file($_FILES["imgProfile"]["tmp_name"], 'data/profileImage/'.$newname);
-    
-    
-        $result = $newname;
-        // echo '<img src="./data/profileImage/'.$result.'">';
-}
 ?>
 
 <!DOCTYPE html>
@@ -60,83 +30,110 @@ $count = 0;
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <div class="container">
+<header>
+    <div class="Navbar">
+      <nav>
+        <input type="checkbox" id="show-search">
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <div class="content">
+        <div class="logo"><a href="index.php">InstarKilogram</a></div>
+          <ul class="links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Notification</a></li>
+            <li>
+              <a href="#" class="desktop-link">Account</a>
+              <input type="checkbox" id="show-features">
+              <label for="show-features">Features</label>
+              <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Setting</a></li>
+                <li><a href="#">Log-out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <a href="login.php" class="login">Log in</a>
+        <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+        <form action="#" class="search-box">
+          <input type="text" placeholder="Type Something to Search..." required>
+          <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+        </form>
+      </nav>
+    </div>
+  </header>
+
+    <div class="container mt-5">
         <form action="" method="post">
-        <div class="row mb-3">
-            <div class="col-sm-3">
-              <div class="profile-pic-wrapper">
-                <div class="pic-holder">
-                <form action="" method="post" enctype="multipart/form-data">
-                    <label for="imgProfile">
-                    Upload your profile image:</label>
-                    <input type="file" name="imgProfile" id="imgProfile">
-                    <img src="./data/profileImage/<?php echo $result?>jpg" style="height: 150px; width: 150px" alt="">
-                    <input type="submit" value="Upload Image" name="submit_image">
-                </form>
-                    <div class="text-center">
-                      <div class="mb-2">
-                        <i class="fa fa-camera fa-2x"></i>
-                      </div>
-                      <div class="text-uppercase">
-                        Update <br /> Profile Photo
-                      </div>
-                    </div>
-                  </label>
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                <div class="profile-pic-wrapper">
+                    
                 </div>
-              </div>
+                </div>
+            </div>       
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Name</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" name="name">
+                </div>
             </div>
-            <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control" value="">
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Email</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" value="" name="email">
+                </div>
             </div>
-          </div>       
-        <div class="row mb-3">
-            <div class="col-sm-3">
-                <h6 class="mb-0">Name</h6>
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Phone</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" value="" name="phone">
+                </div>
             </div>
-            <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control" value="<?php echo $_SESSION['firstName']?>" name="name">
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Mobile</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" value="" name="mobile">
+                </div>
             </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-sm-3">
-                <h6 class="mb-0">Email</h6>
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Address</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" value="" name="address">
+                </div>
             </div>
-            <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control" value="<?php echo $_SESSION['email']?>" name="email">
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-sm-3">
-                <h6 class="mb-0">Phone</h6>
-            </div>
-            <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control" value="" name="phone">
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-sm-3">
-                <h6 class="mb-0">Mobile</h6>
-            </div>
-            <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control" value="" name="mobile">
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-sm-3">
-                <h6 class="mb-0">Address</h6>
-            </div>
-            <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control" value="" name="address">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-9 text-secondary">
-                <input type="submit" name="submit" class="btn btn-primary px-4" value="Save Changes">
-            </div>
-        
-        </div>
+                    <input type="submit" name="submit" class="btn btn-primary px-4" value="Save Changes">
+                    <input type="reset" name="clear" class="btn btn-primary px-4" value="Clear">    
         </form>    
     </div>
+
+    <hr>
+    <!-- footer -->
+  <footer>
+        <div class="footer-container">
+            <div class="footer-outer">
+                <div class="footer-inner">
+                    <a href="#">About</a>
+                    <a href="#">Help</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Copyrights</a>
+                    <a href="#">Privacy</a>
+                </div>
+                <div class="sub">
+                    <p>2022 Instakilogram</p> 
+                </div>
+            </div>
+        </div>
+  </footer>
     
 </body>

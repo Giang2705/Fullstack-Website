@@ -5,9 +5,11 @@ $no ='';
 $fName = '';
 $lName = '';
 $email = '';
+$phone = '';
+$address = '';
+$hobby = '';
 $password = '';
 $userType = '';
-
 
 $csv='./data/accounts_db.csv';
 $fh=fopen($csv,'r');
@@ -21,33 +23,16 @@ function clean_text($string)
  return $string;
 }
 
-// function add_image(){
-//     $extention = pathinfo($_FILES["imgProfile"]["name"], PATHINFO_EXTENSION);
-
-//     $rename = 'avartar_'.$_SESSION['email'].'';
-//     $newname = $rename.'.'.$extention;
-
-
-//     move_uploaded_file($_FILES["imgProfile"]["tmp_name"], 'data/profileImage/'.$newname);
-
-//     if (isset($_POST['submit_image'])){
-//         $result = $newname;
-//         echo '<img src="./data/profileImage/'.$result.'">';
-//     }
-// }
-
-// if (isset($_POST["submit_image"])){
-//     echo add_image();
-// }
-
 if (isset($_POST["submit"])){
     $no = clean_text($_POST["no"]); 
     $fName = clean_text($_POST["fName"]); 
     $lName = clean_text($_POST["lName"]);
     $email = clean_text($_POST["email"]);
+    $phone = clean_text($_POST["phone"]);
+    $address = clean_text($_POST["address"]);
+    $hobby = clean_text($_POST["hobby"]);
     $password = clean_text($_POST["password"]);    
     $userType = clean_text($_POST["user_type"]);
-
 
     $file_open = fopen("./data/accounts_db.csv","a");
     $no = count(file("./data/accounts_db.csv"));
@@ -59,6 +44,9 @@ if (isset($_POST["submit"])){
         'firstName' => $fName, 
         'lastName' => $lName,
         'email' => $email,
+        'phone' => $phone,
+        'address' => $address,
+        'hobby' => $hobby,
         'password' => password_hash($password,PASSWORD_DEFAULT),
         'userType' => $userType,
         // 'imgProfile' => move_uploaded_file($img_temp, $path),
@@ -68,6 +56,9 @@ if (isset($_POST["submit"])){
     $fName = '';
     $lName = '';
     $email = '';
+    $phone = '';
+    $address = '';
+    $hobby = '';
     $password = '';
     $userType = '';
 
@@ -163,6 +154,15 @@ if (isset($_POST["submit"])){
                 <input type="email" name="email" value="<?php echo $email; ?>" required placeholder="Enter your email">
             </div>
             <div class="txt_field">
+                <input type="phone" name="phone" value="<?php echo $email; ?>" required placeholder="Enter your phone">
+            </div>
+            <div class="txt_field">
+                <input type="address" name="address" value="<?php echo $email; ?>" required placeholder="Enter your address">
+            </div>
+            <div class="txt_field">
+                <input type="hobby" name="hobby" value="<?php echo $email; ?>" required placeholder="Enter your hobby">
+            </div>
+            <div class="txt_field">
                 <input type="password" required id="password" name="password" value="<?php echo $password;?>" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password" required>
             </div>
             <div class="txt_field">
@@ -173,10 +173,6 @@ if (isset($_POST["submit"])){
                     <option value="user">User</option>
                     <option value="admin">Admin</option>
                 </select>
-            </div>
-            <div class="termservice">
-                <input id="t&s" type="checkbox">
-                <label for="t&s">I agree with all the statements in <a class="fw-bold text-decoration-underline" style="color: black;" href="#">Terms of service</a></label>
             </div>
             <input id="registerbtn" class="form-btn fw-bold" type="submit" value="SIGN UP" name="submit">
             <input id="resetbtn" type="reset" value="CLEAR">
@@ -201,6 +197,7 @@ if (isset($_POST["submit"])){
         <p>Must between 2 and 20 characters</p>
     </div>
 
+    <hr>
     <footer>
         <div class="footer-container">
             <div class="footer-outer">

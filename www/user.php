@@ -92,22 +92,52 @@
             <div class="information-user">
 
                 <ul>
-                    <li>Born: 26 January, 2001<span> - 21</span></li>
-                    <li>Male</li>
-                    <li>Live in Ho Chi Minh City</li>
+                    <li>Phone: <?php echo $_SESSION['phone']?></li>
+                    <li>Address: <?php echo $_SESSION['address']?></li>
+                    <li>Hobby: <?php echo $_SESSION['hobby']?></li>
                     <li>Study at RMIT University</li>
                 </ul>
 
             </div>
-
-            <div class="frame-upload">
-
-                <div class="users-statu" onclick="location.href='upload.php'">
-                    <h5>Your status ?</h5>
-                </div>
-                <button type="button" onclick="location.href='upload.php'">POST</button>
-
+            <hr>
+            <br><br><br><br><br>
+            <!-- display area -->
+            <div class="container">
+                <h1>Your status and images will be displayd here!</h1>
             </div>
+
+            <br><br><br><br><br>
+            <hr>
+            <!-- Post-form -->
+            <div class="frame-upload-image">
+
+            
+            <form action="" method="post">
+
+                <div class="heading-post">
+
+                    <div class="optional-audience">
+
+                        <select name="audience" id="choosing-audience">
+                            <option value="Public">Public</option>
+                            <option value="Friends">Friends</option>
+                            <option value="Specific">Specific</option>
+                            <option value="Only-me">Only me</option>
+                        </select>
+
+                    </div>
+                </div>
+                
+                <textarea name="status" id="writing-status" cols="90" rows="10" placeholder="What is your mind ?" required></textarea>
+                
+                <div class="images-and-videos">
+                    <input type="file" id="file" multiple>
+                </div>
+                <button type="submit">POST</button>
+                </div>
+            </form>
+        </div>
+
 
         </div>
         <!-- end of the user profile -->
@@ -116,6 +146,7 @@
         
         </div>
     </main>
+    <hr>
     <footer>
         <div class="footer-container">
             <div class="footer-outer">

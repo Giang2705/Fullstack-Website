@@ -6,7 +6,7 @@ $pass=$_POST['password'];
 $csv='./data/accounts_db.csv';
 $fh=fopen($csv,'r');
 $error=0;
-while(list($no, $firstName, $lastName, $email, $password, $userType)=fgetcsv($fh,1024,',')){
+while(list($no, $firstName, $lastName, $email, $phone, $address, $hobby, $password, $userType)=fgetcsv($fh,1024,',')){
     if(($name==$email)&&(password_verify($pass,$password)==true))
     {   
         while($error<1){
@@ -15,11 +15,12 @@ while(list($no, $firstName, $lastName, $email, $password, $userType)=fgetcsv($fh
                 $_SESSION['firstName']=$firstName;
                 $_SESSION['lastName']=$lastName;
                 $_SESSION['email'] = $email;
+                $_SESSION['phone'] =   $phone ;
+                $_SESSION['address'] = $address ;
+                $_SESSION['hobby'] =  $hobby ;
                 $_SESSION['password'] = $password;
                 $_SESSION['userType'] = $userType;
-                // $_SESSION['phone'] =   $phone ;
-                // $_SESSION['mobile'] =  $mobile ;
-                // $_SESSION['address'] = $address ;
+                
 
                 header("Location:user.php");
             } else{

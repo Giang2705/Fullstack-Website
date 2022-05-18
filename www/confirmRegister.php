@@ -24,7 +24,6 @@ $count = 0;
     
     move_uploaded_file($_FILES["imgProfile"]["tmp_name"], 'data/profileImage/'.$newname);
     
-    
         $result = $newname;
         // echo '<img src="./data/profileImage/'.$result.'">';
 }
