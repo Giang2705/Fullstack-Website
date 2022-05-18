@@ -186,24 +186,6 @@ if (isset($_POST["submit"])){
         <p>Must between 2 and 20 characters</p>
     </div>
 
-    <hr>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-outer">
-                <div class="footer-inner">
-                    <a href="#">About</a>
-                    <a href="#">Help</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Copyrights</a>
-                    <a href="#">Privacy</a>
-                </div>
-            <div class="sub">
-                <p>2022 Instakilogram</p> 
-            </div>
-            </div>
-        </div>
-    </footer>
-
     <script src="./js/register.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

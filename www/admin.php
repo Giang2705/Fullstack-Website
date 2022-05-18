@@ -40,7 +40,7 @@ session_start();
         <div class="content">
         <div class="logo"><a href="index.php">InstarKilogram</a></div>
           <ul class="links">
-            <li><a href="#">Home</a></li>
+            <li><a href="admin.php">Home</a></li>
             <li><a href="#">Notification</a></li>
             <li>
               <a href="#" class="desktop-link">Account</a>
@@ -49,7 +49,7 @@ session_start();
               <ul>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Setting</a></li>
-                <li><a href="#">Log-out</a></li>
+                <li><a href="index.php">Log-out</a></li>
               </ul>
             </li>
           </ul>
