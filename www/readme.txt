@@ -21,7 +21,10 @@ Demonstration record URL:
 website FAQ: 
 	- Run root folder by localhost PHP
 	- Admin account: ID "hagiang.nguyen2705@gmail.com"; password "Giang270599"
-	- User account: ID "tri@gmail.com"; password "Tri12345"
+	- User accounts: 
+		+ ID "tri@gmail.com"; password "Tri12345";
+		+ ID "user@gmail.com"; password "User1234";
+		+ ID "user3@gmail.com"; password "Theuser123";
 
 Presentation Video link:
 https://rmiteduau-my.sharepoint.com/:v:/g/personal/s3914108_rmit_edu_vn/EX0qCPtGZMBHuNCVDyfL7toB-Tr3TLgHcRPDfKnaQZCitQ?e=x08gXC	
