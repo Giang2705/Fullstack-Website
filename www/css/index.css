@@ -31,9 +31,11 @@ nav .content{
   align-items: center;
 }
 nav .content .links{
+  margin-top: 20px;
   margin-left: 80px;
   display: flex;
 }
+
 .content .logo a{
     width: 105px;
     height: 45px;
@@ -132,7 +134,6 @@ nav .content .links{
   position: absolute;
   background: #BDABF2;
   top: 80px;
-  z-index: -1;
   opacity: 0;
   visibility: hidden;
 }
@@ -233,11 +234,11 @@ nav .content .links{
     max-height: 100vh;
   }
   .content .links ul li{
-    margin: 7px 20px;
+    
+    margin: 10px 10px;
   }
   .content .links ul li a{
     font-size: 18px;
-    line-height: 30px;
     border-radius: 5px!important;
   }
 }
@@ -267,8 +268,19 @@ nav .content .links{
   height: 2000px;
 }
 
+main{
+  margin-bottom: 100%;
+}
+
+.welcome{
+  margin-top: 10%;
+  text-align: center;
+}
+
 /* footer */
 footer{
+    margin-bottom: 100%;
+    position: relative;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -278,15 +290,7 @@ footer{
     text-align: center;
     margin-bottom: 0;
 }
-.footer-inner{
-    margin-bottom: 25px;
-}
-.footer-inner a{
-    font-size: 20px;
-    color: grey;
-    text-decoration: none;
-    margin: 0 3% 0 3%;
-}
+
 .sub{
     margin-right: 60px;
 }

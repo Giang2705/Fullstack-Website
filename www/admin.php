@@ -92,8 +92,9 @@ session_start();
           $html.='<th>Address</th>';
           $html.='<th>Hobby</th>';
           $html.='<th>Password</th>';
+          $html.='<th>User Type</th>';
           $html.='<th>Edit</th>';
-        $html.='</thead>';
+          $html.='</thead>';
         $html.='<tbody>';
         while($line = fgetcsv($file)){
             $i = $i + 1;
@@ -104,7 +105,6 @@ session_start();
             $html.='<td class="text-center">';
               $html.='<form action="delete.php" method="post">';
                 $html.= '<input class="btn btn-danger me-3" name="btnDelete_'.$i.'" type="submit" value="Delete"/>';
-                $html.= '<input class="btn btn-primary" type="submit" value="View"/>';
               $html.='</form>';
             $html.='</td>';
             $html.='</tr>';

@@ -101,19 +101,8 @@ if (isset($_POST["submit"])){
         <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
         <div class="content">
         <div class="logo"><a href="index.php">InstarKilogram</a></div>
-          <ul class="links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Notification</a></li>
-            <li>
-              <a href="#" class="desktop-link">Account</a>
-              <input type="checkbox" id="show-features">
-              <label for="show-features">Features</label>
-              <ul>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Setting</a></li>
-                <li><a href="#">Log-out</a></li>
-              </ul>
-            </li>
+        <ul class="links">
+            <li><a href="login.php">Log in</a></li>
           </ul>
         </div>
         <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>

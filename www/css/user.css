@@ -132,7 +132,6 @@ nav .content .links{
   position: absolute;
   background: #BDABF2;
   top: 80px;
-  z-index: -1;
   opacity: 0;
   visibility: hidden;
 }

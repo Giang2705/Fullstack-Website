@@ -1,5 +1,28 @@
 <?php
 session_start();
+
+$csv='./data/accounts_db.csv';
+$fh=fopen($csv,'r');
+$error='';
+
+function clean_text($string)
+{
+ $string = trim($string);
+ $string = stripslashes($string);
+ $string = htmlspecialchars($string);
+ return $string;
+}
+
+if (isset($_POST["save"])){
+    $_SESSION['firstName'] = clean_text($_POST["newName"]); 
+    $_SESSION['email'] = clean_text($_POST["newEmail"]);
+    $_SESSION['phone'] = clean_text($_POST["newPhone"]);
+    $_SESSION['address'] = clean_text($_POST["newAddress"]);
+    $_SESSION['hobby'] = clean_text($_POST["newHobby"]);
+
+    header('Location: user.php');
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -64,20 +87,13 @@ session_start();
   </header>
 
     <div class="container mt-5">
-        <form action="" method="post">
-            <div class="row mb-3">
-                <div class="col-sm-3">
-                <div class="profile-pic-wrapper">
-                    
-                </div>
-                </div>
-            </div>       
+        <form action="" method="post"> 
             <div class="row mb-3">
                 <div class="col-sm-3">
                     <h6 class="mb-0">Name</h6>
                 </div>
                 <div class="col-sm-9 text-secondary">
-                    <input type="text" class="form-control" name="name">
+                    <input type="text" class="form-control" name="newName">
                 </div>
             </div>
             <div class="row mb-3">
@@ -85,7 +101,7 @@ session_start();
                     <h6 class="mb-0">Email</h6>
                 </div>
                 <div class="col-sm-9 text-secondary">
-                    <input type="text" class="form-control" value="" name="email">
+                    <input type="text" class="form-control" value="" name="newEmail">
                 </div>
             </div>
             <div class="row mb-3">
@@ -93,15 +109,7 @@ session_start();
                     <h6 class="mb-0">Phone</h6>
                 </div>
                 <div class="col-sm-9 text-secondary">
-                    <input type="text" class="form-control" value="" name="phone">
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-sm-3">
-                    <h6 class="mb-0">Mobile</h6>
-                </div>
-                <div class="col-sm-9 text-secondary">
-                    <input type="text" class="form-control" value="" name="mobile">
+                    <input type="text" class="form-control" value="" name="newPhone">
                 </div>
             </div>
             <div class="row mb-3">
@@ -109,10 +117,19 @@ session_start();
                     <h6 class="mb-0">Address</h6>
                 </div>
                 <div class="col-sm-9 text-secondary">
-                    <input type="text" class="form-control" value="" name="address">
+                    <input type="text" class="form-control" value="" name="newAddress">
                 </div>
             </div>
-                    <input type="submit" name="submit" class="btn btn-primary px-4" value="Save Changes">
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Hobby</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" value="" name="newHobby">
+                </div>
+            </div>
+
+                    <input type="submit" name="save" class="btn btn-primary px-4" value="Save Changes">
                     <input type="reset" name="clear" class="btn btn-primary px-4" value="Clear">    
         </form>    
     </div>

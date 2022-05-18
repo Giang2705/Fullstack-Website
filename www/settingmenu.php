@@ -1,3 +1,30 @@
+<?php
+session_start();
+
+$csv='./data/accounts_db.csv';
+$fh=fopen($csv,'r');
+$error='';
+
+function clean_text($string)
+{
+ $string = trim($string);
+ $string = stripslashes($string);
+ $string = htmlspecialchars($string);
+ return $string;
+}
+
+if (isset($_POST["save"])){
+    $_SESSION['firstName'] = clean_text($_POST["newName"]); 
+    $_SESSION['email'] = clean_text($_POST["newEmail"]);
+    $_SESSION['phone'] = clean_text($_POST["newPhone"]);
+    $_SESSION['address'] = clean_text($_POST["newAddress"]);
+    $_SESSION['hobby'] = clean_text($_POST["newHobby"]);
+
+    header('Location: user.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +36,7 @@
    
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
 
@@ -46,7 +73,7 @@
 </header>
 
     <div class="setting">
-        <div class="d-flex align-items-start">
+        <div class="d-flex align-items-start mt-5 mb-5">
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <button class="nav-link active" id="v-pills-ProfileSetting-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ProfileSetting" type="button" role="tab" aria-controls="v-pills-ProfileSetting" aria-selected="true">Profile Setting</button>
             <button class="nav-link " id="v-pills-ChangePassword-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ChangePassword" type="button" role="tab" aria-controls="v-pills-ChangePassword" aria-selected="false">Change Password</button>
@@ -61,7 +88,7 @@
                                 <h6 class="mb-0">Full Name</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="Darth Vader">
+                                <input name='newName' type="text" class="form-control" value="">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -69,7 +96,7 @@
                                 <h6 class="mb-0">Email</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="abc@example.com">
+                                <input name='newEmail' type="text" class="form-control" value="">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -77,15 +104,7 @@
                                 <h6 class="mb-0">Phone</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="+84.12456">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Mobile</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="024.456789">
+                                <input name='newPhone' type="text" class="form-control" value="">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -93,13 +112,13 @@
                                 <h6 class="mb-0">Address</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="Death Star">
+                                <input name='newAddress' type="text" class="form-control" value="">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-3"></div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="button" class="btn btn-primary px-4" value="Save Changes">
+                                <input name='save' type="button" class="btn btn-primary px-4" value="Save Changes">
                             </div>
                         
                     </div>

@@ -1,5 +1,33 @@
 <?php
     session_start();
+    $status = '';
+    $audience = '';
+
+    $csv='./data/status.csv';
+    $fh=fopen($csv,'r');
+    $error='';
+
+    function clean_text($string)
+    {
+    $string = trim($string);
+    $string = stripslashes($string);
+    $string = htmlspecialchars($string);
+    return $string;
+    }
+
+if (isset($_POST['submit_image'])){
+        
+            
+            $extention = pathinfo($_FILES["imgUpload"]["name"], PATHINFO_EXTENSION);
+        
+            $rename = 'upload_'.$_SESSION['email'].'';
+            $newname = $rename.'.'.$extention;
+            
+            
+            move_uploaded_file($_FILES["imgUpload"]["tmp_name"], 'data/image_post/'.$newname);
+            $result = $newname;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +59,7 @@
         <div class="content">
         <div class="logo"><a href="index.php">InstarKilogram</a></div>
           <ul class="links">
-            <li><a href="#">Home</a></li>
+            <li><a href="user.php">Home</a></li>
             <li><a href="#">Notification</a></li>
             <li>
               <a href="#" class="desktop-link">Account</a>
@@ -39,7 +67,7 @@
               <label for="show-features">Features</label>
               <ul>
                 <li><a href="#">Profile</a></li>
-                <li><a href="./settingmenu.html">Setting</a></li>
+                <li><a href="./settingmenu.php">Setting</a></li>
                 <li><a href="#">Log-out</a></li>
               </ul>
             </li>
@@ -104,15 +132,37 @@
             <!-- display area -->
             <div class="container">
                 <h1>Your status and images will be displayd here!</h1>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card display" style="width: 100%; height: 100%">
+                                <div class="avatar">
+                                    <img src="./data/profileImage/avartar_<?php echo $_SESSION['no']?>.jpg" alt="user-image" style="width:30%; height:50%">
+                                </div>
+                                <div class="profile-setting">
+                                    <h3 style="font-size: 20px; font-weight: 700" class="user-name"><?php echo $_SESSION['firstName']?></h3>
+                                </div>
+                            <hr>
+                            <div class="card-body">
+                                <img src="./data/image_post/<?php echo $result?>" alt="" style="width: 100%; height: 100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <br><br><br><br><br>
             <hr>
             <!-- Post-form -->
             <div class="frame-upload-image">
+                <form action="" method="post" enctype="multipart/form-data">
+                    <label for="imgUpload">
+                    Upload your profile image:</label>
+                    <input type="file" name="imgUpload" id="imgUpload">
+                    <input type="submit" value="Upload Image" name="submit_image">
+                </form>
 
             
-            <form action="" method="post">
+            <!-- <form action="" method="post">
 
                 <div class="heading-post">
 
@@ -131,11 +181,11 @@
                 <textarea name="status" id="writing-status" cols="90" rows="10" placeholder="What is your mind ?" required></textarea>
                 
                 <div class="images-and-videos">
-                    <input type="file" id="file" multiple>
+                    
                 </div>
-                <button type="submit">POST</button>
+                <input class="btn btn-primary" type="submit" name="submit" value="POST">
                 </div>
-            </form>
+            </form> -->
         </div>
 
 
